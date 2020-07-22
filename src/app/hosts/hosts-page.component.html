@@ -1,0 +1,31 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-title>Hosts</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ng-template [ngIf]="hosts">
+        <ion-list>
+            <ion-item *ngFor="let host of hosts">
+
+
+                <ion-label>{{host.name}}</ion-label>
+                <ion-icon name="server" slot="start"></ion-icon>
+
+
+            </ion-item>
+        </ion-list>
+
+    </ng-template>
+
+    <ng-template [ngIf]="!hosts">
+        <ion-list>
+            <ion-item>
+                <ion-label>No Hosts</ion-label>
+                <ion-icon color="warning" name="warning" slot="start"></ion-icon>
+            </ion-item>
+        </ion-list>
+    </ng-template>
+
+</ion-content>
