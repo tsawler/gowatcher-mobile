@@ -6,7 +6,11 @@ const routes: Routes = [
     {
         path: '',
         component: ProblemPage,
-    }
+    },
+  {
+    path: 'problem-detail',
+    loadChildren: () => import('./problem-detail/problem-detail.module').then( m => m.ProblemDetailPageModule)
+  }
 ];
 
 @NgModule({
