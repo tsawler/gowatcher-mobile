@@ -1,5 +1,9 @@
 <ion-header>
     <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-menu-button menu="main-drawer"></ion-menu-button>
+        </ion-buttons>
+
         <ion-buttons slot="primary">
             <ion-button routerLink="/tabs/hosts/add-host">
             <ion-icon name="add" slot="icon-only"></ion-icon>
@@ -12,21 +16,17 @@
 <ion-content>
 
     <ng-template [ngIf]="hosts">
-        <ion-list>
+        <ion-list class="ion-margin-top">
             <ion-item *ngFor="let curHost of hosts" detail>
-
-
                 <ion-label [routerLink]="['/','tabs', 'hosts', curHost.id]">{{curHost.name}}</ion-label>
                 <ion-icon name="server" slot="start"></ion-icon>
-
-
             </ion-item>
         </ion-list>
 
     </ng-template>
 
     <ng-template [ngIf]="!hosts">
-        <ion-list>
+        <ion-list class="ion-margin-top">
             <ion-item >
                 <ion-label>No Hosts</ion-label>
                 <ion-icon color="warning" name="warning" slot="start"></ion-icon>
