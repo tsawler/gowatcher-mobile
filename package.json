@@ -1,8 +1,8 @@
 {
-  "name": "tabs",
+  "name": "Gowatcher Mobile",
   "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "https://ionicframework.com/",
+  "author": "GoWatcher",
+  "homepage": "https://gowatcher.ca",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -50,5 +50,5 @@
     "tslint": "~6.1.0",
     "typescript": "~3.8.3"
   },
-  "description": "An Ionic project"
+  "description": "The Gowatcher mobile application."
 }
