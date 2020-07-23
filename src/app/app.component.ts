@@ -4,6 +4,7 @@ import {Platform} from '@ionic/angular';
 import {SplashScreen} from '@ionic-native/splash-screen/ngx';
 import {StatusBar} from '@ionic-native/status-bar/ngx';
 import {AuthService} from './auth/auth.service';
+import {Router} from '@angular/router';
 
 @Component({
     selector: 'app-root',
@@ -16,6 +17,7 @@ export class AppComponent {
         private splashScreen: SplashScreen,
         private statusBar: StatusBar,
         private authService: AuthService,
+        private router: Router,
     ) {
         this.initializeApp();
     }
@@ -30,6 +32,6 @@ export class AppComponent {
     onLogout() {
         console.log('would log out');
         this.authService.logout();
-        console.log('Authenticated:', this.authService.getUserIsAuthenticated());
+        this.router.navigateByUrl('/auth');
     }
 }
