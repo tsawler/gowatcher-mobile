@@ -10,7 +10,7 @@
             <ion-item *ngFor="let host of hosts">
 
 
-                <ion-label>{{host.name}}</ion-label>
+                <ion-label [routerLink]="['/','tabs', 'hosts', host.id]">{{host.name}}</ion-label>
                 <ion-icon name="server" slot="start"></ion-icon>
 
 
@@ -21,7 +21,7 @@
 
     <ng-template [ngIf]="!hosts">
         <ion-list>
-            <ion-item>
+            <ion-item >
                 <ion-label>No Hosts</ion-label>
                 <ion-icon color="warning" name="warning" slot="start"></ion-icon>
             </ion-item>
