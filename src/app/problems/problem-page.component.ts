@@ -3,7 +3,7 @@ import {ProblemModel} from './problem.model';
 import {ProblemServiceService} from './problem-service.service';
 
 @Component({
-    selector: 'app-tab1',
+    selector: 'problems-component',
     templateUrl: 'problem-page.component.html',
     styleUrls: ['problem-page.component.scss']
 })
