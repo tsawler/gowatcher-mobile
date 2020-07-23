@@ -1,9 +1,37 @@
 <ion-header>
-    <ion-toolbar>
-        <ion-title>auth</ion-title>
+    <ion-toolbar color="dark">
+        <ion-title>Login to GoWatcher</ion-title>
     </ion-toolbar>
 </ion-header>
 
+<!--<ion-content>-->
+<!--    <div class="ion-text-center ion-margin-vertical">-->
+<!--    <ion-button (click)="onLogin()" color="primary">Login</ion-button>-->
+<!--    </div>-->
+
+<!--    <div class="ion-row">-->
+<!--        <div class="ion-col">-->
+<!--            <div class="ion-text-center">-->
+<!--                <h5 style="text-align: center;">This text is in the center of the screen</h5>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</ion-content>-->
+
+
 <ion-content>
-    <ion-button (click)="onLogin()" color="primary">Login</ion-button>
+    <ion-row class="fullheight xc">
+        <ion-col class="ion-text-center">
+            <p>
+                <ion-button expand="full" color="primary" (click)="onLogin()">Login</ion-button>
+            </p>
+            <p>
+                <ion-button expand="full"  color="secondary">Don't have an account? Sign up!</ion-button>
+            </p>
+
+        </ion-col>
+    </ion-row>
+<!--    <div class="fullheight xc">-->
+<!--        -->
+<!--    </div>-->
 </ion-content>
