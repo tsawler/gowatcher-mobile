@@ -4,7 +4,7 @@ import {HostServiceModel} from './host-service.model';
 @Injectable({
     providedIn: 'root'
 })
-export class HostServicesServiceService {
+export class HostServicesService {
 
     private services: HostServiceModel[] = [
         {
