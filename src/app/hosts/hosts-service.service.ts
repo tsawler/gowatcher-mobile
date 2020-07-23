@@ -6,7 +6,7 @@ import {HostModel} from './host.model';
 })
 export class HostsServiceService {
 
-    private hosts: HostModel[] = [
+    public hosts: HostModel[] = [
         {
             id: '1',
             name: 'GoBlender',
@@ -22,5 +22,9 @@ export class HostsServiceService {
 
     getAllHosts() {
         return [...this.hosts];
+    }
+
+    getHost(id: string) {
+        return {...this.hosts.find(h => h.id = id)};
     }
 }
