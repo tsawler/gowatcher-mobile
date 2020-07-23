@@ -3,7 +3,7 @@ import {HostModel} from './host.model';
 import {HostsServiceService} from './hosts-service.service';
 
 @Component({
-    selector: 'hosts-component',
+    selector: 'app-hosts-component',
     templateUrl: 'hosts-page.component.html',
     styleUrls: ['hosts-page.component.scss']
 })
