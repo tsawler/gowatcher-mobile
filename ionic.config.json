@@ -1,5 +1,7 @@
 {
   "name": "Gowatcher Mobile",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }
