@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-edit-host',
-  templateUrl: './edit-host.page.html',
-  styleUrls: ['./edit-host.page.scss'],
+    selector: 'app-edit-host',
+    templateUrl: './edit-host.page.html',
+    styleUrls: ['./edit-host.page.scss'],
 })
 export class EditHostPage implements OnInit {
 
-  constructor() { }
+    constructor() {
+    }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
 
 }

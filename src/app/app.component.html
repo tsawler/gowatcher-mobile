@@ -1,6 +1,6 @@
 <ion-app>
 
-    <ion-menu side="start" menuId="main-drawer">
+    <ion-menu menuId="main-drawer" side="start">
         <ion-header>
             <ion-toolbar>
                 <ion-title>
@@ -17,7 +17,7 @@
                     </ion-item>
                 </ion-menu-toggle>
                 <ion-menu-toggle>
-                    <ion-item lines="none" (click)="onLogout()" button>
+                    <ion-item (click)="onLogout()" button lines="none">
                         <ion-icon name="exit" slot="start"></ion-icon>
                         <ion-label>Logout</ion-label>
                     </ion-item>

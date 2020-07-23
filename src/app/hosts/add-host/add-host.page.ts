@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-add-host',
-  templateUrl: './add-host.page.html',
-  styleUrls: ['./add-host.page.scss'],
+    selector: 'app-add-host',
+    templateUrl: './add-host.page.html',
+    styleUrls: ['./add-host.page.scss'],
 })
 export class AddHostPage implements OnInit {
 
-  constructor() { }
+    constructor() {
+    }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
 
 }

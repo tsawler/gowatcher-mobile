@@ -1,17 +1,18 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
 
-import { ShowHostPage } from './show-host.page';
+import {ShowHostPage} from './show-host.page';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: ShowHostPage
-  }
+    {
+        path: '',
+        component: ShowHostPage
+    }
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule],
+    imports: [RouterModule.forChild(routes)],
+    exports: [RouterModule],
 })
-export class ShowHostPageRoutingModule {}
+export class ShowHostPageRoutingModule {
+}
