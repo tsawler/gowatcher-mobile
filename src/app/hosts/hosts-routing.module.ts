@@ -16,7 +16,7 @@ const routes: Routes = [
     loadChildren: () => import('./edit-host/edit-host.module').then( m => m.EditHostPageModule)
   },
   {
-    path: 'show-host/:hostId',
+    path: ':hostId',
     loadChildren: () => import('./show-host/show-host.module').then( m => m.ShowHostPageModule)
   }
 ];
