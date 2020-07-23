@@ -6,7 +6,19 @@ const routes: Routes = [
     {
         path: '',
         component: HostsPage,
-    }
+    },
+  {
+    path: 'add-host',
+    loadChildren: () => import('./add-host/add-host.module').then( m => m.AddHostPageModule)
+  },
+  {
+    path: 'edit-host/:hostId',
+    loadChildren: () => import('./edit-host/edit-host.module').then( m => m.EditHostPageModule)
+  },
+  {
+    path: 'show-host/:hostId',
+    loadChildren: () => import('./show-host/show-host.module').then( m => m.ShowHostPageModule)
+  }
 ];
 
 @NgModule({
