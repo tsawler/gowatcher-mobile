@@ -12,10 +12,10 @@
 <ion-content>
     <ng-template [ngIf]="hosts">
         <ion-list>
-            <ion-item *ngFor="let host of hosts" detail>
+            <ion-item *ngFor="let curHost of hosts" detail>
 
 
-                <ion-label [routerLink]="['/','tabs', 'hosts', host.id]">{{host.name}}</ion-label>
+                <ion-label [routerLink]="['/','tabs', 'hosts', curHost.id]">{{curHost.name}} {{curHost.id}}</ion-label>
                 <ion-icon name="server" slot="start"></ion-icon>
 
 

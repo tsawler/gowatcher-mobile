@@ -6,13 +6,13 @@ import {HostModel} from './host.model';
 })
 export class HostsServiceService {
 
-    public hosts: HostModel[] = [
+    private hosts: HostModel[] = [
         {
-            id: '1',
+            id: 1,
             name: 'GoBlender',
         },
         {
-            id: '2',
+            id: 2,
             name: 'Wheels & Deals',
         }
     ];
@@ -25,6 +25,7 @@ export class HostsServiceService {
     }
 
     getHost(id: string) {
-        return {...this.hosts.find(h => h.id = id)};
+        console.log('searching for id', id);
+        return {...this.hosts.find(h => h.id === +id)};
     }
 }

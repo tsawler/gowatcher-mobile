@@ -11,7 +11,7 @@ import {HostsServiceService} from '../hosts-service.service';
 })
 export class ShowHostPage implements OnInit {
 
-    host: HostModel;
+    oneHost: HostModel;
 
     constructor(private route: ActivatedRoute, private navCtrl: NavController, private hostService: HostsServiceService) {
     }
@@ -22,11 +22,12 @@ export class ShowHostPage implements OnInit {
                 this.navCtrl.navigateBack('/tabs/hosts');
                 return;
             }
-            this.host = this.hostService.getHost(paramMap.get('hostId'));
+            this.oneHost = this.hostService.getHost(paramMap.get('hostId'));
         });
     }
 
-    ionOnViewEnter() {
+    ionOnViewWillEnter() {
+
     }
 
 }

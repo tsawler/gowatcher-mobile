@@ -4,11 +4,11 @@
             <ion-back-button defaultHref="/tabs/hosts"></ion-back-button>
         </ion-buttons>
         <ion-buttons slot="primary">
-            <ion-button routerLink="/tabs/hosts/edit-host/1">
+            <ion-button routerLink="/tabs/hosts/edit-host/{{oneHost.id}}">
                 <ion-icon name="create-outline" slot="icon-only"></ion-icon>
             </ion-button>
         </ion-buttons>
-        <ion-title class="ion-text-center">{{host.name}}</ion-title>
+        <ion-title class="ion-text-center">{{oneHost.name}}</ion-title>
     </ion-toolbar>
 </ion-header>
 
