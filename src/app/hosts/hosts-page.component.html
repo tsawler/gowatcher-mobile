@@ -7,7 +7,7 @@
 <ion-content>
     <ng-template [ngIf]="hosts">
         <ion-list>
-            <ion-item *ngFor="let host of hosts">
+            <ion-item *ngFor="let host of hosts" detail>
 
 
                 <ion-label [routerLink]="['/','tabs', 'hosts', host.id]">{{host.name}}</ion-label>
