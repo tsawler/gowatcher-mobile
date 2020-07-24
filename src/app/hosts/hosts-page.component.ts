@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {HostModel} from './host.model';
-import {HostsServiceService} from './hosts-service.service';
+import {HostsService} from './hosts.service';
 import {Router} from '@angular/router';
 
 @Component({
@@ -12,7 +12,7 @@ export class HostsPage {
 
     hosts: HostModel[];
 
-    constructor(private hostsService: HostsServiceService, private router: Router) {
+    constructor(private hostsService: HostsService, private router: Router) {
     }
 
     ionViewWillEnter() {

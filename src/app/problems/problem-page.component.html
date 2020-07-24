@@ -1,5 +1,5 @@
 <ion-header>
-    <ion-toolbar color="primary">
+    <ion-toolbar color="medium">
         <ion-buttons slot="start">
             <ion-menu-button menu="main-drawer"></ion-menu-button>
         </ion-buttons>
@@ -15,30 +15,33 @@
 
     <ng-template [ngIf]="problems">
         <ion-list class="ion-margin-top">
-            <ion-item *ngFor="let problem of problems">
 
-                <ng-template [ngIf]="problem.type == 'warning'">
+            <ng-template [ngIf]="problem.type == 'problem'" *ngFor="let problem of problems">
+                <ion-item color="danger" lines="none">
                     <ion-label>{{problem.serviceName}} on {{problem.hostName}}</ion-label>
-                    <ion-icon color="warning" name="warning" slot="start"></ion-icon>
-                </ng-template>
+                    <ion-icon name="warning" slot="start"></ion-icon>
+                </ion-item>
+            </ng-template>
 
-                <ng-template [ngIf]="problem.type == 'problem'">
-                    <ion-label color="danger">{{problem.serviceName}} on {{problem.hostName}}</ion-label>
-                    <ion-icon color="danger" name="warning" slot="start"></ion-icon>
-                </ng-template>
+            <ng-template [ngIf]="problem.type == 'warning'" *ngFor="let problem of problems">
+                <ion-item color="warning" lines="none">
+                    <ion-label>{{problem.serviceName}} on {{problem.hostName}}</ion-label>
+                    <ion-icon name="warning" slot="start"></ion-icon>
+                </ion-item>
+            </ng-template>
 
-            </ion-item>
         </ion-list>
 
     </ng-template>
 
     <ng-template [ngIf]="!problems">
         <ion-list class="ion-margin-top">
-            <ion-item>
+            <ion-item lines="none">
                 <ion-label>No problems or warnings</ion-label>
                 <ion-icon color="success" name="checkmark-circle-outline" slot="start"></ion-icon>
             </ion-item>
         </ion-list>
     </ng-template>
+
 
 </ion-content>

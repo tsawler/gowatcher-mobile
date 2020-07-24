@@ -4,16 +4,20 @@ import {HostModel} from './host.model';
 @Injectable({
     providedIn: 'root'
 })
-export class HostsServiceService {
+export class HostsService {
 
     private hosts: HostModel[] = [
         {
             id: 1,
             name: 'GoBlender',
+            problem: 1,
+            warning: 1,
         },
         {
             id: 2,
             name: 'Wheels & Deals',
+            problem: 0,
+            warning: 0,
         }
     ];
 

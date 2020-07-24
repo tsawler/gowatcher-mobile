@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {HostModel} from '../host.model';
 import {ActivatedRoute} from '@angular/router';
 import {NavController} from '@ionic/angular';
-import {HostsServiceService} from '../hosts-service.service';
+import {HostsService} from '../hosts.service';
 
 @Component({
     selector: 'app-show-host',
@@ -13,7 +13,7 @@ export class ShowHostPage implements OnInit {
 
     oneHost: HostModel;
 
-    constructor(private route: ActivatedRoute, private navCtrl: NavController, private hostService: HostsServiceService) {
+    constructor(private route: ActivatedRoute, private navCtrl: NavController, private hostService: HostsService) {
     }
 
     ngOnInit() {

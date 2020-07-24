@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {ProblemModel} from './problem.model';
-import {ProblemServiceService} from './problem-service.service';
+import {ProblemsService} from './problems.service';
 
 @Component({
     selector: 'app-problems-component',
@@ -11,7 +11,7 @@ export class ProblemPage {
 
     private problems: ProblemModel[];
 
-    constructor(private problemService: ProblemServiceService) {
+    constructor(private problemService: ProblemsService) {
     }
 
     ionViewWillEnter() {

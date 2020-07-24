@@ -10,25 +10,31 @@
 <ion-content [fullscreen]="true">
 
     <ng-template [ngIf]="services">
-        <ion-list>
-            <ion-item *ngFor="let service of services">
+        <br>
+        <ion-list *ngFor="let service of services">
 
-                <ng-template [ngIf]="service.warning == 1">
+            <ng-template [ngIf]="service.warning == 1">
+                <ion-item lines="none" color="warning">
                     <ion-label>{{service.serviceName}} - {{service.hostName}}</ion-label>
-                    <ion-icon color="warning" name="{{service.icon}}" slot="start"></ion-icon>
-                </ng-template>
-
-                <ng-template [ngIf]="service.problem == 1">
-                    <ion-label color="danger">{{service.serviceName}} - {{service.hostName}}</ion-label>
-                    <ion-icon color="danger" name="{{service.icon}}" slot="start"></ion-icon>
-                </ng-template>
-
-                <ng-template [ngIf]="service.warning === 0 && service.problem === 0">
-                    <ion-label color="success">{{service.serviceName}} - {{service.hostName}}</ion-label>
                     <ion-icon name="{{service.icon}}" slot="start"></ion-icon>
-                </ng-template>
+                </ion-item>
+            </ng-template>
 
-            </ion-item>
+            <ng-template [ngIf]="service.problem == 1">
+                <ion-item lines="none" color="danger">
+                    <ion-label>{{service.serviceName}} - {{service.hostName}}</ion-label>
+                    <ion-icon name="{{service.icon}}" slot="start"></ion-icon>
+                </ion-item>
+            </ng-template>
+
+            <ng-template [ngIf]="service.warning === 0 && service.problem === 0">
+                <ion-item lines="none" color="success">
+                    <ion-label>{{service.serviceName}} - {{service.hostName}}</ion-label>
+                    <ion-icon name="{{service.icon}}" slot="start"></ion-icon>
+                </ion-item>
+            </ng-template>
+
+
         </ion-list>
 
     </ng-template>

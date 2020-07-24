@@ -37,6 +37,26 @@ export class HostServicesService {
             problem: 0,
             warning: 0,
         },
+        {
+            id: '4',
+            hostID: '2',
+            serviceID: '2',
+            serviceName: 'redis',
+            hostName: 'Wheels & Deals',
+            icon: 'server',
+            problem: 0,
+            warning: 0,
+        },
+        {
+            id: '5',
+            hostID: '2',
+            serviceID: '2',
+            serviceName: 'redis',
+            hostName: 'Wheels & Deals',
+            icon: 'server',
+            problem: 0,
+            warning: 0,
+        },
     ];
 
     constructor() {

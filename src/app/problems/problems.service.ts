@@ -4,7 +4,7 @@ import {ProblemModel} from './problem.model';
 @Injectable({
     providedIn: 'root'
 })
-export class ProblemServiceService {
+export class ProblemsService {
 
     private problems: ProblemModel[] = [
         {
