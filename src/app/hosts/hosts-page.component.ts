@@ -22,4 +22,6 @@ export class HostsPage {
     onEdit(id: number) {
         this.router.navigateByUrl('/tabs/hosts/edit-host/' + id);
     }
+
+
 }

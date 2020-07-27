@@ -1,7 +1,7 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {HostModel} from '../host.model';
 import {ActivatedRoute} from '@angular/router';
-import {NavController} from '@ionic/angular';
+import {IonSlides, NavController} from '@ionic/angular';
 import {HostsService} from '../hosts.service';
 
 @Component({
@@ -10,8 +10,10 @@ import {HostsService} from '../hosts.service';
     styleUrls: ['./show-host.page.scss'],
 })
 export class ShowHostPage implements OnInit {
+    @ViewChild('slides', {static: true}) slider: IonSlides;
 
     oneHost: HostModel;
+    segment = 0;
 
     constructor(private route: ActivatedRoute, private navCtrl: NavController, private hostService: HostsService) {
     }
@@ -28,6 +30,15 @@ export class ShowHostPage implements OnInit {
 
     ionOnViewWillEnter() {
 
+    }
+
+
+    async segmentChanged(ev: any) {
+        await this.slider.slideTo(this.segment);
+    }
+
+    async slideChanged() {
+        this.segment = await this.slider.getActiveIndex();
     }
 
 }

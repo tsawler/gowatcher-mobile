@@ -15,4 +15,35 @@
 
 <ion-content>
 
+    <ion-segment (ionChange)="segmentChanged($event)"  [(ngModel)]="segment">
+        <ion-segment-button value="0">
+            <ion-label>Host</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="1">
+            <ion-label>Services</ion-label>
+        </ion-segment-button>
+    </ion-segment>
+
+    <ion-slides #slides (ionSlideDidChange)="slideChanged()" scrollbar="true">
+        <ion-slide>
+            <ion-grid>
+                <ion-row>
+                    <ion-col>
+                        First Segment
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-slide>
+
+        <ion-slide>
+            <ion-grid>
+                <ion-row>
+                    <ion-col>
+                        Second Segment
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-slide>
+    </ion-slides>
+
 </ion-content>
