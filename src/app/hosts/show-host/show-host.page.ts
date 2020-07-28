@@ -32,7 +32,6 @@ export class ShowHostPage implements OnInit {
 
     }
 
-
     async segmentChanged(ev: any) {
         await this.slider.slideTo(this.segment);
     }
