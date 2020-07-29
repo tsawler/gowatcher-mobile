@@ -24,4 +24,9 @@ export class HostsPage {
         slidingItem.close();
         this.router.navigateByUrl('/tabs/hosts/edit-host/' + id);
     }
+
+    onDelete(id: number, slidingItem: IonItemSliding) {
+        console.log('would delete', id);
+        slidingItem.close();
+    }
 }
