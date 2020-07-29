@@ -2,6 +2,7 @@ import {Component} from '@angular/core';
 import {HostModel} from './host.model';
 import {HostsService} from './hosts.service';
 import {Router} from '@angular/router';
+import {IonItemSliding} from '@ionic/angular';
 
 @Component({
     selector: 'app-hosts-component',
@@ -19,9 +20,8 @@ export class HostsPage {
         this.hosts = this.hostsService.getAllHosts();
     }
 
-    onEdit(id: number) {
+    onEdit(id: number, slidingItem: IonItemSliding) {
+        slidingItem.close();
         this.router.navigateByUrl('/tabs/hosts/edit-host/' + id);
     }
-
-
 }
